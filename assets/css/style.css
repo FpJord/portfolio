@@ -6,7 +6,6 @@
   box-sizing: border-box;
 
   font-family: "Inter";
-
 }
 
 :root {
@@ -20,8 +19,8 @@
 }
 
 [data-theme="dark"] {
-    --white: #000;
-    --black: #fff;
+  --white: #000;
+  --black: #fff;
 }
 
 #main {
@@ -29,7 +28,7 @@
   flex-direction: column;
 
   width: 100vw;
-  height: 100vh;
+  height: 500vh;
 
   background: var(--white);
   color: var(--black);
@@ -45,7 +44,7 @@ header {
   justify-content: center;
 
   gap: 15vw;
-  margin-bottom: 3vw;
+  margin-bottom: 0vw;
 }
 
 header > .me-name {
@@ -99,22 +98,20 @@ nav > ul > a:hover {
 
 .section {
   margin-left: 10vw;
-
 }
 
 #hello {
   width: 80vw;
   height: 50vh;
 
-padding-top: 4vh;
+  padding-top: 4vh;
 
-  display:  flex;
+  display: flex;
   flex-direction: column;
 
   margin-top: 3vw;
 
   border: 2px solid red;
-
 }
 
 .hello-row {
@@ -172,31 +169,28 @@ padding-top: 4vh;
   scale: 0.8;
 }
 
-
-
 .atual-mode {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-    animation: rounded 14s linear infinite;
+  animation: rounded 14s linear infinite;
 }
 
-
-@keyframes rounded{
+@keyframes rounded {
   0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
-} 
+}
 
 .atual-mode span {
-    position: absolute;
-    left: 50%;
+  position: absolute;
+  left: 50%;
 
-    transform-origin: 0 75px;
+  transform-origin: 0 75px;
 }
 
 #circle-text {
@@ -204,214 +198,268 @@ padding-top: 4vh;
   font-size: 1.2rem;
 }
 
-
 .toggle {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .switch {
-    position: absolute;
-    display: inline-block;
-  
-    width: 80px;
-    height: 40px;
-  
-    margin: 50px;
+  position: absolute;
+  display: inline-block;
 
-    z-index: 10;
+  width: 80px;
+  height: 40px;
 
-    transform: rotate(90deg);
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    background: none;
-    border: 3px solid var(--black);
-    transition: 0.4s;
-  
-    border-radius: 34px;
-  }
-  
-  .switch input {
-    display: none;
-  }
-  
-  .slider::before {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    left: 2px;
-    bottom: 0;
-    top: 2px;
-    background: var(--black);
-    transition: 0.4s;
-    border-radius: 50px;
-  }
-  
-  input:checked + .slider {
-    background: none;
-    border: 3px solid var(--white);
-  }
-  
-  input:checked + .slider::before {
-    transform: translateX(38px);
-    background: var(--white);
-  }
+  margin: 50px;
 
+  z-index: 10;
 
-  .contact-buttons {
-    
+  transform: rotate(90deg);
+}
 
-    width: 30vw;
-    height: 10vw;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    margin-top: -5vw;
-    margin-left: 25vw;
+  background: none;
+  border: 3px solid var(--black);
+  transition: 0.4s;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    
-  }
+  border-radius: 34px;
+}
 
-  .contact-buttons > button {
-    width: 50px;
-    height: 50px;
+.switch input {
+  display: none;
+}
 
-    background: none;
-    border: 1.5px solid var(--grey);
-    border-radius: 50%;
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 2px;
+  bottom: 0;
+  top: 2px;
+  background: var(--black);
+  transition: 0.4s;
+  border-radius: 50px;
+}
 
-    font-family: 'Inter';
-    font-weight: 700;
+input:checked + .slider {
+  background: none;
+  border: 3px solid var(--black);
+}
 
-    cursor: pointer;
+input:checked + .slider::before {
+  transform: translateX(38px);
+  background: var(--black);
+}
 
-    color: var(--black);
-  }
+.contact-buttons {
+  width: 30vw;
+  height: 10vw;
 
-  .contact-buttons > button > i {
-    font-size: 22px;
-    color: var(--black);
-  }
+  margin-top: -5vw;
+  margin-left: 25vw;
 
-  #skills {
-    margin-top: 1vw;
-    border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
 
-    width: 80vw;
-  height: 5000px;
+.contact-buttons > button {
+  width: 50px;
+  height: 50px;
 
+  background: none;
+  border: 1.5px solid var(--grey);
+  border-radius: 50%;
 
-  }
+  font-family: "Inter";
+  font-weight: 700;
+
+  cursor: pointer;
+
+  color: var(--black);
+}
+
+.contact-buttons > button > i {
+  font-size: 22px;
+  color: var(--black);
+}
+
+#skills {
+  margin-top: 1vw;
+  border: 2px solid red;
+
+  width: 80vw;
+  height: 500px;
+}
 
 .skills-title {
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
 
   position: relative;
 }
 
-  .skills-title > h1 {
-   color: var(--grey);
-   opacity: 0.3;
-   font-size: 8rem;
-   position: absolute;
-   z-index: 1; 
+.skills-title > h1 {
+  color: var(--grey);
+  opacity: 0.3;
+  font-size: 8rem;
+  position: absolute;
+  z-index: 1;
 
-   padding: 0;
+  padding: 0;
 
-   margin-top: 10vw;
-  }
+  margin-top: 10vw;
+}
 
-  .skills-title > h2 {
-    z-index: 2;
+.skills-title > h2 {
+  z-index: 2;
 
-    position: absolute;
+  position: absolute;
 
-    margin-top: 8svw;
-    margin-left: 3vw;
+  margin-top: 8vw;
+  margin-left: 3vw;
 
-    font-weight: 500;
-  }
+  font-weight: 500;
+}
 
-  .stacks {
-    display: flex;
-    gap: 30px;
+.stacks {
+  display: flex;
+  gap: 30px;
 
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
+}
 
-  .stacks > button {
-    width: 7vw;
-    height: 7vw;
+.stacks > button {
+  width: 7vw;
+  height: 7vw;
 
-    margin-top: 10vw;
+  margin-top: 10vw;
 
-    background: none;
-    border: 2px solid var(--black);
-  
-    transition: background 0.4s ease-in-out;
+  background: none;
+  border: 2px solid var(--black);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  transition: background 0.4s ease-in-out;
 
-  .stacks > button > span {
-    position: relative;
-    top: -15px;
-    color: #fff;
-    font-weight: 700;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stacks > button > span {
+  position: relative;
+  top: -15px;
+  color: #fff;
+  font-weight: 700;
+}
+
+button > img {
+  width: 70px;
+}
+
+#stack-html:hover {
+  background-color: #ff5722;
+}
+
+#stack-css:hover {
+  background-color: #2299f8;
+}
+
+#stack-js:hover {
+  background-color: #ffdf00;
+}
+
+#stack-boots:hover {
+  background-color: #5e3b7f;
+}
+
+#stack-git:hover {
+  background-color: #f05033;
+}
+
+#projects {
+  width: 80vw;
+  height: 100vw;
+
+  border: 2px solid blue;
+
+  margin-top: 3vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-title {
+  border: 2px solid red;
+  width: 70vw;
+  height: 14vw;
+}
+
+.project-title > h1 {
+  color: var(--grey);
+  opacity: 0.3;
+  font-size: 8rem;
+  position: absolute;
+  z-index: 1;
+
+  padding: 0;
+
+}
+
+.project-title > h2 {
+  z-index: 2;
+
+  position: absolute;
+
+  margin-top: 9vw;
+  margin-left: 3vw;
+
+  font-weight: 500;
+}
 
 
-  button > img {
-    width: 70px;
-  }
+.project-grid {
+  border: 2px solid black;
 
-  #stack-html:hover {
-    background-color: #FF5722;
-  }
+  margin-top: 1vw;
 
-  #stack-css:hover {
-    background-color: #2299F8;
-  }
+  width: 70vw;
+  height: 60vw;
 
-  #stack-js:hover {
-    background-color: #FFDF00;
-  }
+  margin-left: 5vw;
 
-  #stack-boots:hover {
-    background-color: #5E3B7F;
-  }
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
 
-  #stack-git:hover {
-    background-color: #F05033;
-  }
+.project-card {
+  width: 30vw;
+  height: 30vw;
 
+  background-color: red;
+}
 
-  #projects {
-    width: 960px;
-    height: 960px;
-
-    border: 2px solid red;
-  }
+.project-title {
+  margin-top: -24vw;
+}

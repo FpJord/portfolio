@@ -18,6 +18,7 @@ toggle.addEventListener('click', () => {
 
     localStorage.setItem("themeSystem", newTheme)
     defineCurrentTheme(newTheme)
+
 })
 
 const themeSystem = localStorage.getItem("themeSystem") || "light"
@@ -28,8 +29,8 @@ function defineCurrentTheme(theme){
 
 };
 
-if (themeSystem === "dark") {
-    text.innerText('modo escuro . modo escuro.')
+if (themeSystem == 'dark') {
+    text.innerHTML='felipe'
 }
 
 
