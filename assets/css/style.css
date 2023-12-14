@@ -6,6 +6,7 @@
   box-sizing: border-box;
 
   font-family: "Inter";
+
 }
 
 :root {
@@ -28,12 +29,23 @@
   --shadow-white: rgba(0, 0, 0, 0.35);
 }
 
+.section {
+
+  position: relative;
+  margin-right: 0vw;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 #main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   width: 100vw;
-  height: 500vh;
+  height: 400vh;
 
   background: var(--white);
   color: var(--black);
@@ -164,7 +176,7 @@ nav > ul > a:hover {
   position: relative;
 
   top: -1vw;
-  left: 10vw;
+  left: 20vw;
 
   font-weight: 500;
 
@@ -302,7 +314,7 @@ input:checked + .slider::before {
 }
 
 #skills {
-  margin-top: 5vw;
+  margin-top: -3vw;
   
 
   width: 80vw;
@@ -354,6 +366,7 @@ input:checked + .slider::before {
 
   margin-top: 10vw;
 
+
   background: none;
   border: 2px solid var(--black);
 
@@ -398,11 +411,10 @@ button > img {
 
 #projects {
   width: 80vw;
-  height: 100vw;
-
+  height: 130vw;
  
 
-  margin-top: 8vw;
+  margin-top: -10vw;
 
   display: flex;
   flex-direction: column;
@@ -449,7 +461,7 @@ button > img {
   width: 70vw;
   height: 70vw;
 
-  margin-left: 5vw;
+  margin-left: 0vw;
 
   display: grid;
   grid-template-columns: 30vw 30vw;
@@ -478,6 +490,8 @@ button > img {
 .project-card > h1 {
   color: var(--black);
   font-weight: 700;
+
+  margin-bottom: 2vw;
 }
 
 .project-card > .project-buttons {
@@ -583,4 +597,124 @@ button > img {
   font-weight: 500;
 
   cursor: pointer;
+}
+
+#more-projects {
+  width: 12vw;
+  height: 3vw;
+
+  position: relative;
+
+  margin-top: 3vw;
+  margin-left: 35vw;
+
+  border-radius: 30px;
+
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#more-projects > i {
+  font-size: 1.2rem;
+}
+
+.other-projects {
+  width: 70vw;
+  height: 30vw;
+
+  background: red;
+
+  margin-top: 1vw;
+  margin-left: 5vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  padding-left: 2.2vw;
+}
+
+.repository { 
+  width: 20vw;
+  height: 13vw;
+
+  background: blue;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+}
+
+
+
+.repository > h1, p {
+  margin-left: 3vw;
+  margin-top: -1vw;
+}
+
+#zoomProjeto {
+margin-top: 10vw;
+
+}
+
+.modal-content {
+  background: var(--white);
+  color: var(--black);
+}
+
+.modal-header, .modal-body {
+  background: var(--white);
+  color: var(--black);
+}
+
+.modal-body > p {
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.modal-pé {
+  height: 80px;
+
+  background-color: var(--white);
+  border-radius: 5px;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.modal-pé > a {
+  margin-top: 5px;
+}
+
+.modal-pé > a > button {
+  width: 12vw;
+  height: 3vw;
+  border-radius: 30px;
+  border: 1px solid;
+}
+
+
+#orbitshift-project {
+  background: url(orbitshift-static.PNG);
+  background-size: cover;
+  background-position: center;
+
+  width: 28vw;
+}
+
+#skambo-project {
+  background: url(skambo-static.PNG);
+  background-size: cover;
+  background-position: center;
+
+  width: 25vw;
 }
