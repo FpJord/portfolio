@@ -11,6 +11,9 @@
 :root {
   --white: #fff;
   --black: #000;
+  --shadow-black: rgba(0, 0, 0, 0.35);
+  --shadow-white: rgba(255, 255, 255, 0.35);
+
 
   --main-blue: #0511f2;
   --dark-blue: #0d15a6;
@@ -21,6 +24,8 @@
 [data-theme="dark"] {
   --white: #000;
   --black: #fff;
+  --shadow-black: rgba(255, 255, 255, 0.84);
+  --shadow-white: rgba(0, 0, 0, 0.35);
 }
 
 #main {
@@ -102,7 +107,7 @@ nav > ul > a:hover {
 
 #hello {
   width: 80vw;
-  height: 50vh;
+  height: 60vh;
 
   padding-top: 4vh;
 
@@ -111,13 +116,10 @@ nav > ul > a:hover {
 
   margin-top: 3vw;
 
-  border: 2px solid red;
 }
 
 .hello-row {
   display: flex;
-
-  overflow: auto;
 }
 
 .apresentation > h2 {
@@ -162,7 +164,7 @@ nav > ul > a:hover {
   position: relative;
 
   top: -1vw;
-  left: 20vw;
+  left: 10vw;
 
   font-weight: 500;
 
@@ -269,7 +271,7 @@ input:checked + .slider::before {
   width: 30vw;
   height: 10vw;
 
-  margin-top: -5vw;
+  margin-top: -11vw;
   margin-left: 25vw;
 
   display: flex;
@@ -300,11 +302,11 @@ input:checked + .slider::before {
 }
 
 #skills {
-  margin-top: 1vw;
-  border: 2px solid red;
+  margin-top: 5vw;
+  
 
   width: 80vw;
-  height: 500px;
+  height: 25vw;
 }
 
 .skills-title {
@@ -347,8 +349,8 @@ input:checked + .slider::before {
 }
 
 .stacks > button {
-  width: 7vw;
-  height: 7vw;
+  width: 8vw;
+  height: 8vw;
 
   margin-top: 10vw;
 
@@ -365,7 +367,7 @@ input:checked + .slider::before {
 
 .stacks > button > span {
   position: relative;
-  top: -15px;
+  top: -5px;
   color: #fff;
   font-weight: 700;
 }
@@ -398,9 +400,9 @@ button > img {
   width: 80vw;
   height: 100vw;
 
-  border: 2px solid blue;
+ 
 
-  margin-top: 3vw;
+  margin-top: 8vw;
 
   display: flex;
   flex-direction: column;
@@ -408,9 +410,12 @@ button > img {
 }
 
 .project-title {
-  border: 2px solid red;
+  
   width: 70vw;
   height: 14vw;
+
+  display: flex;
+  align-items: center;
 }
 
 .project-title > h1 {
@@ -427,22 +432,22 @@ button > img {
 .project-title > h2 {
   z-index: 2;
 
-  position: absolute;
+  position: relative;
 
-  margin-top: 9vw;
-  margin-left: 3vw;
+  margin-top: 5vw;
+  margin-left: 4vw;
 
   font-weight: 500;
 }
 
 
 .project-grid {
-  border: 2px solid black;
+ 
 
   margin-top: 1vw;
 
   width: 70vw;
-  height: 60vw;
+  height: 70vw;
 
   margin-left: 5vw;
 
@@ -450,16 +455,132 @@ button > img {
   grid-template-columns: 30vw 30vw;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  gap: 4vw;
 }
 
 .project-card {
   width: 30vw;
-  height: 30vw;
+  height: 31vw;
+  padding-bottom: 1vw;
 
-  background-color: red;
+  background: none;
+  box-shadow: var(--shadow-black) 0px 5px 20px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-title {
   margin-top: -24vw;
+}
+
+.project-card > h1 {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.project-card > .project-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-image {
+  background-size: cover;
+  background-position: center;
+
+  width: 24vw;
+  height: 18vw;
+
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+
+  border: 1px solid #00000050;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+#github-project {
+  background-image: url(github-static.png);
+}
+
+#github-project:hover {
+  background-image: url(github-mov.gif);
+}
+
+#sistok-project {
+  background: url(sistok-static.png);
+  background-size: cover;
+  background-position: center;
+
+  width: 28vw;
+}
+
+#sistok-project:hover {
+  background: url(Sistok-mov.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+#calc-project {
+  background: url(calculadora-static.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#calc-project:hover {
+  background: url(calculadora-mov.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+#kreativ-project {
+  background: url(kreativ-static.png);
+  background-size: cover;
+  background-position: center;
+
+  width: 28vw;
+}
+
+#kreativ-project:hover {
+  background: url(kreativ-mov.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-buttons > button {
+  width: 10vw;
+  height: 3vw;
+  
+  border: none;
+  border-radius: 35px;
+
+  margin-top: -1vw;
+}
+
+.html-css {
+  background: #00A3FF;
+  color: #fff;
+}
+
+.js {
+  background: #FFB800;
+  color: #fff;
+}
+
+.ux-ui {
+  background: #9E00FF;
+  color: #fff;
+}
+
+.project-card > .project-about {
+  background: none;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 32px;
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-weight: 500;
+
+  cursor: pointer;
 }
